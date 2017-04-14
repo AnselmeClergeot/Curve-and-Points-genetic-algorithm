@@ -6,7 +6,7 @@ public class Curve {
 	public Curve(int degree)
 	{
 		this.degree = degree;
-		this.coefficients = new double[degree];
+		this.coefficients = new double[degree + 1];
 	}
 	
 	public void setCoefficient(int coefficient, double value)
@@ -23,17 +23,15 @@ public class Curve {
 	{
 		double y = 0;
 		
-		for(int i = 0; i < this.degree; i++)
+		for(int i = 0; i < this.degree + 1; i++)
 		{
-			
-			
-			if(i == this.degree - 1) //If it is the real number without x attached
+			if(i == this.degree) //If it is the real number without x attached
 			{
-				y += this.coefficients[this.degree-1];
+				y += this.coefficients[this.degree];
 			}
 			else
 			{
-				y += this.coefficients[i] * Math.pow(x, this.degree - 1);
+				y += this.coefficients[i] * Math.pow(x, this.degree - i);
 			}
 		}
 		
