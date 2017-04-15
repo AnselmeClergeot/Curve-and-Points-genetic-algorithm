@@ -109,9 +109,6 @@ public class Grid {
 				}
 			}
 		}
-		
-		this.calculateFitnesses();
-		this.solutions.sort(Collections.reverseOrder(Comparator.comparing(Solution::getFitness)));
 	}
 	
 	private double getFitnessOf(Curve curve)
