@@ -19,6 +19,11 @@ public class Curve {
 		return this.coefficients[coefficient];
 	}
 	
+	public int getCoefficientsNumber()
+	{
+		return this.degree+1;
+	}
+	
 	public double getY(double x)
 	{
 		double y = 0;
@@ -41,6 +46,32 @@ public class Curve {
 	public double getErrorOfY(double x, double y)
 	{
 		return Math.abs(getY(x) - y);
+	}
+	
+	public String toString()
+	{
+		String res = "y = ";
+		
+		for(int i = 0; i < this.coefficients.length; i++)
+		{
+			if(this.coefficients[i] > 0 && i != 0)
+				res += " + ";
+			else
+				res += " ";
+			
+			res += this.coefficients[i];
+			
+			if(i != this.coefficients.length - 1)
+			{
+				if(i != this.coefficients.length - 2)
+					res += "x^" + (this.degree-i);
+				else
+					res+= "x";
+			}
+				
+		}
+		
+		return res;
 	}
 	
 }
