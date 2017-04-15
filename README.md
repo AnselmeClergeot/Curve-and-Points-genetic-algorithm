@@ -8,4 +8,4 @@ As mentionned it is a genetic algorithm.
 <img src="https://github.com/AnselmeClergeot/Curve-and-Points-genetic-algorithm/blob/master/demo/early_demo.PNG" />
 
 _Giving three points and the degree of the curve (chosed 2) the algorithm found the best solution possible, here in red. The other black curves
-are solutions from earlier generations, showing improvment of individuals._
+are solutions from earlier generations, showing improvment of individuals. Screenshot from GeoGebra software._
