@@ -15,6 +15,7 @@ public class Solution {
 		return this.fitness;
 	}
 	
+	
 	public void setFitness(double fitness)
 	{
 		this.fitness = fitness;

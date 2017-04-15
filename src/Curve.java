@@ -21,7 +21,12 @@ public class Curve {
 	
 	public int getCoefficientsNumber()
 	{
-		return this.degree+1;
+		return this.coefficients.length;
+	}
+	
+	public int getDegree()
+	{
+		return this.degree;
 	}
 	
 	public double getY(double x)
